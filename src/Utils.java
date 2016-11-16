@@ -5,17 +5,9 @@ import java.util.Scanner;
 public class Utils {
 	
 	
-	
-	public static void listFilesForFolder(final File folder) {
-		
-
-	    
-	}
-
-	
-	
-	public static void main(String [ ] args){
-                
+	//list and pick file 
+	public static void listFilesForFolder() {
+        
 		String sentence = null;
 		
         while(true){
@@ -59,11 +51,26 @@ public class Utils {
     	Scanner scanner2 = new Scanner(System.in);
     	System.out.print("Enter a number:\t");
     	choice = scanner2.nextInt();
+    	if(choice> filelist.size()){ System.out.println("out of bounty");}
+    	
+    	
 		} catch (Exception e){
 			
 			System.out.println (" Not a number; Please enter a number!");
 			
 		}}while (choice <= 0 || ( choice > filelist.size()));
+		
+		System.out.println("the file you selected is" + filelist.get(choice-1));
+		
+
+	    
+	}
+
+	
+	
+	public static void main(String [ ] args){
+        
+		
 		
 		
 		
